@@ -1,92 +1,144 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+	position: relative;
+	background-color: #050505;
+    color: #f9f9f9;
+	font-size: 16pt; /* Base font size */
+}
+
+
 .page{
     font-family: 'Lora';
     font-weight: normal;
-	width: 70vw;
-	padding: 50px;
+	width: 100%;
+	/*padding: 5vw;*/
 	margin: auto;
-	background-color: #7F7F7F;
+	background-color: #1c1c1c;
+    height: 100in;
+}
+
+.overhead{
+    font-family: 'Spectral';
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 0.5em;
+	margin: auto;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    width: 100%;
+	background-color: #1c1c1c;
+}
+
+.content{
     flex-wrap: wrap;
 }
 
-.sidebar {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+
+
+.page-title {
+    font-family: 'Spectral';
+    font-weight: 500;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background-color: transparent;
+    background-image: url("../images/title/PRL_SKY_GALAXY.png");
+    background-size: cover;
+    background-position: center 0;
+    overscroll-behavior: none;
 }
 
-.box {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.theme1 {
+	background-color: #434343;
+}
+
+.textbox {
+    font-family: 'Lora';
+    padding: 7% 10%;
+    line-height: 1.5;
 }
 
 /* all styles for any screen larger than a phone go in here*/
 @media (min-width: 414px) {
     .page{
-        width: 80vw;
-        padding: 50px;
-        margin: auto;
-        background-color: #941c76;
+        width: 80%;
+        
+    }
+
+    .textbox {
+        padding: 4% 7%;
     }
 }
 
-body {
-  font-size: 16pt; /* Base font size */
+.pagetitletext{
+    font-size: 2.5em;
 }
 
 h1 {
-  font-size: 2.5em; /* 2.5 * 16 = 40px */
+  font-size: 2.25em; /* 2.5 * 16 = 40pt */
+  font-family: 'Spectral';
 }
 
 h2 {
-  font-size: 1.875em; /* 1.875 * 16 = 30px */
+  font-size: 1.875em; /* 1.875 * 16 = 30pt */
 }
 
 p {
-  font-size: 1em; /* 1 * 16 = 16px */
+  font-size: 0.75em; /* 1 * 16 = 16pt */
+  margin-top: 30px;
+}
+
+.p-18 {
+    font-size: 1.125em; /* 18pt*/
+    font-weight: bold;
 }
 
 /* Sidebar menu styling */
 .sidebar {
-  height: 100%;
-  width: 0; /* Hidden by default */
-  position: fixed;
-  z-index: 1; /* Stay on top of other content */
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s; /* Smooth sliding effect */
-  padding-top: 60px;
+    height: 100%;
+    width: 0; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Stay on top of other content */
+    top: auto;
+    left: auto;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s; /* Smooth sliding effect */
+    padding-top: 60px;
 }
 
 /* Sidebar links */
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
 /* Close button position */
 .sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 /* Style for the button that opens the sidebar */
-.open-btn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+.openbtn {
+    color: #f9f9f9;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 15px;
+    border: none;
+    background-color: transparent;
 }
