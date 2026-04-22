@@ -64,10 +64,6 @@ body {
     background-color: #666666;
 }
 
-.sectionheader {
-    text-align: center;
-}
-
 .textbox {
     font-family: 'Lora';
     padding: 7% 10%;
@@ -104,9 +100,54 @@ p {
   margin-top: 30px;
 }
 
+li {
+    font-size: 0.75em;
+
+}
+
+a {
+    color: orange
+}
+
+a:hover{
+    color: lightsalmon;
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 4px;
+}
+
 .p-18 {
     font-size: 1.125em; /* 18pt*/
     font-weight: bold;
+}
+
+.header-stack {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.center-tri-segment {
+    display: flex;
+    align-content: flex-end;
+    /*flex-wrap: wrap;*/
+}
+
+.center-tri-segment p {
+    margin-top: 0px;
+}
+
+.sectionheader {
+    text-align: center;
+}
+
+.pfp {
+    width: 256px;
+    border-radius: 32px;
+    outline-color: lightgray;
+    outline-style: solid;
+    outline-width: 3px;
 }
 
 /* Sidebar menu styling */
