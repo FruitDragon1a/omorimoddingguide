@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/colors.css" charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/templates.js" defer></script>
     <script src="js/functions.js" defer></script>
 
 
@@ -19,13 +20,7 @@
      
      <div class="page">
         
-        <div id="siteNavigation" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
+        <site-nav></site-nav>
         <nav class="overhead"><button onclick = "openNav()" class="openbtn">☰</button>  OMORI MODDING GUIDE</nav>
 
         <div class="content">
@@ -58,11 +53,11 @@
                 </ol>
             </div>
 
-            <div class = "textbox">
-                
+            <div class = "textbox theme1">
+                <h1 class="sectionheader">Links and Resources</h1>
             </div>
 
-            <p>Hi Wassup <em> Wassup</em></p>
+                <p>Hi Wassup <em> Wassup</em></p>
                 <p>Hi Wassup <em> Wassup</em></p>
                 <p>Hi Wassup <em> Wassup</em></p>
                 <p>Hi Wassup <em> Wassup</em></p>

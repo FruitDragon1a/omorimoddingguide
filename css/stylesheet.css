@@ -57,11 +57,15 @@ body {
 }
 
 .theme1 {
-	background-color: #434343;
+	background-color: #272727;
 }
 
 .theme2 {
     background-color: #666666;
+}
+
+.sectionheader {
+    text-align: center;
 }
 
 .textbox {

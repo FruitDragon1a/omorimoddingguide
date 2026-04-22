@@ -20,3 +20,4 @@ window.addEventListener("scroll", function () {
 
     page.style.backgroundPosition = `center ${scrollY * speed}px`;
 });
+
