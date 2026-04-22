@@ -16,6 +16,7 @@ body {
 	margin: auto;
 	background-color: #1c1c1c;
     height: 100in;
+    transition: 0.5s;
 }
 
 .overhead{
@@ -66,7 +67,7 @@ body {
 }
 
 /* all styles for any screen larger than a phone go in here*/
-@media (min-width: 414px) {
+@media (min-width: 1028px) {
     .page{
         width: 80%;
         
@@ -105,10 +106,12 @@ p {
     height: 100%;
     width: 0; /* Hidden by default */
     position: fixed;
-    z-index: 1; /* Stay on top of other content */
+    z-index: 2; /* Stay on top of other content */
     top: auto;
     left: auto;
-    background-color: #111;
+    background-color: transparent;
+    background-image: url("../images/bgs/navbar.png");
+    background-size: cover;
     overflow-x: hidden;
     transition: 0.5s; /* Smooth sliding effect */
     padding-top: 60px;
