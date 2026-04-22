@@ -1,0 +1,92 @@
+.page{
+    font-family: 'Lora';
+    font-weight: normal;
+	width: 70vw;
+	padding: 50px;
+	margin: auto;
+	background-color: #7F7F7F;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.box {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+/* all styles for any screen larger than a phone go in here*/
+@media (min-width: 414px) {
+    .page{
+        width: 80vw;
+        padding: 50px;
+        margin: auto;
+        background-color: #941c76;
+    }
+}
+
+body {
+  font-size: 16pt; /* Base font size */
+}
+
+h1 {
+  font-size: 2.5em; /* 2.5 * 16 = 40px */
+}
+
+h2 {
+  font-size: 1.875em; /* 1.875 * 16 = 30px */
+}
+
+p {
+  font-size: 1em; /* 1 * 16 = 16px */
+}
+
+/* Sidebar menu styling */
+.sidebar {
+  height: 100%;
+  width: 0; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Stay on top of other content */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* Smooth sliding effect */
+  padding-top: 60px;
+}
+
+/* Sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Close button position */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style for the button that opens the sidebar */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
