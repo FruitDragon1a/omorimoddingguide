@@ -70,6 +70,26 @@ body {
     line-height: 1.5;
 }
 
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.linkbox {
+    background-color: #000000;
+    margin: 10px;
+    padding: 0px;
+}
+
+.linkbox li {
+    font-size: 0.75em
+}
+
+.linkbox p {
+    margin-top: 0px;
+}
+
 /* all styles for any screen larger than a phone go in here*/
 @media (min-width: 1028px) {
     .page{
