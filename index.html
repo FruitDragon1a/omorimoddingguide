@@ -20,7 +20,11 @@
      
      <div class="page">
         
-        <site-nav></site-nav>
+        <div id="siteNavigation" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <site-nav></site-nav>
+        </div>
+        
         <nav class="overhead"><button onclick = "openNav()" class="openbtn">☰</button>  OMORI MODDING GUIDE</nav>
 
         <div class="content">
@@ -45,11 +49,25 @@
 
             </div>
 
-            <div class = "textbox tableofcontents theme1">
-                <ol>
-                    <li>Hi Wassup <em> Wassup</em></li>
-                    <li>Woah its a table of contents </li>
-                    <li>Im lazy </li>
+            <div class = "textbox theme1 linkbox">
+                <h1 class="sectionheader">Table of Contents</h1>
+                <ol class="tableofcontents">
+                    <li>Setup</li>
+                    <li>GitHub</li>
+                    <li>YAML Files and Dialogue</li>
+                    <li>Events</li>
+                    <li>Maps</li>
+                    <li>Sprites and Art</li>
+                    <ul>
+                        <li>OMORI Style Guide</li>
+                    </ul>
+                    <li>States</li>
+                    <li>Weapons & Charms</li>
+                    <li>Skills & Items</li>
+                    <li>Party Members</li>
+                    <li>Plugins</li>
+                    <li>Enemies</li>
+                    <li>Common Errors & Misc Tips</li>
                 </ol>
             </div>
 

@@ -1,8 +1,7 @@
 class SiteNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div id="siteNavigation" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Setup</a>
@@ -18,7 +17,9 @@ class SiteNav extends HTMLElement {
         <a href="#">Plugins</a>
         <a href="#">Enemies</a>
         <a href="#">Common Errors & Misc Tips</a>
-      </div>
+      
     `;
   }
 }
+
+customElements.define("site-nav", SiteNav);
