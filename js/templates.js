@@ -23,4 +23,23 @@ class SiteNav extends HTMLElement {
   }
 }
 
-customElements.define('site-nav', SiteNav);
+customElements.define('footer', Footer);
+
+class Footer extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="footer collection">
+            <div>
+                <p>FruitDragon & TomatoRadio's OMORI Modding Guide</p>
+                <p>Special thanks to the OMORI team & the OMORI Modding Community</p>
+            </div>
+            <div class = "right">
+                <p>If you notice any issues with this guide, please contact us or fill out this form. </p>
+                <p class="footer-license">All templates provided under MIT license. All base game assets provided with open access to source material. All other resources are provided under the licenses assigned by their creators.</p>
+            </div>
+        </div>
+    `;
+  }
+}
+
+customElements.define('footer', Footer);

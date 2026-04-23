@@ -15,7 +15,6 @@ body {
 	/*padding: 5vw;*/
 	margin: auto;
 	background-color: #1c1c1c;
-    height: 100in;
     transition: 0.5s;
 }
 
@@ -31,7 +30,27 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-	background-color: #1c1c1c;
+	background-color: #0A0A0A;
+}
+
+.footer {
+    font-family: 'Lora';
+    font-style: italic;
+    background-color: #0A0A0A;
+    height: auto;
+}
+
+.footer div {
+    margin: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+.footer-license {
+    font-size: 0.5em;
+    color: #AAAAAA
 }
 
 .content{
@@ -73,33 +92,62 @@ body {
 .collection {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .linkbox {
-    background-color: #000000;
-    margin: 10px;
-    padding: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+.linkbox ul {
+    padding-left: 20px;
 }
 
 .linkbox li {
-    font-size: 0.75em
+    margin-top: 10px;
+    font-size: 0.75em;
 }
 
 .linkbox p {
     margin-top: 0px;
+    font-size: .8125em;
+    font-family: 'Spectral';
+}
+
+.linkbox a {
+    color: #e3b0ff;
+    text-decoration: none;
+}
+.linkbox a:hover {
+    color: #74438f;
+    background-color: transparent;
 }
 
 /* all styles for any screen larger than a phone go in here*/
 @media (min-width: 1028px) {
     .page{
         width: 80%;
+        max-width: 1244px;
         
     }
 
     .textbox {
         padding: 4% 7%;
     }
+
+    .collection {
+        justify-content: space-around;
+    }
+
+    .linkbox p {
+        font-size: .875em;
+    }
+
+    .footer div {
+        width: 45%;
+    }
+
 }
 
 .pagetitletext{
