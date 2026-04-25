@@ -1,0 +1,90 @@
+/* all styles for any screen larger than a phone go in here*/
+@media (min-width: 1028px) {
+    .page{
+        width: 80%;
+        max-width: 1248px;
+        
+    }
+
+    .textbox {
+        padding: 4% 7%;
+    }
+
+    .pfp {
+        width: 40%;
+    }
+
+    .namebox {
+        padding: 4% 4%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .namebox-text {
+        width: 50%;
+    }
+    
+    .namebox-text h1 {
+        font-size: 2.25em;
+    }
+
+    .namebox-text p {
+        margin: 0px;
+    }
+
+    .namebox-links {
+        margin: 15px;
+        padding: 0px 10px;
+        gap: 20px;
+    }
+
+    .namebox-links a {
+        flex: 1;
+    }
+
+    .collection {
+        justify-content: space-around;
+    }
+
+    .linkbox p {
+        font-size: .875em;
+    }
+
+    .footer div {
+        width: 45%;
+    }
+
+    .tableofcontents li {
+        margin-left: 10vw;
+        font-size: 2.25em;
+    }
+
+}
+
+/*dont put anything in here, this is just to make the sidebar thing work, use the other @media*/
+@media (min-width: 1744px) {
+    .sidebar {
+        left: calc((100vw - 1248px) / 2 - 250px);
+        transition: 0s;
+        background-color: #111111;
+    }
+
+    .sidebar.open {
+        left: calc((100vw - 1248px) / 2 - 250px);
+    }
+
+    .openbtn {
+        color: #0A0A0A;
+        cursor: default;
+        transition: 0.3s;
+    }
+
+    .sidebar .closebtn {
+        color: #111111;
+        cursor: default;
+        background-color: transparent;
+        
+    }
+}
