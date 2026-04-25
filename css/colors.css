@@ -6,9 +6,29 @@
     color: yellow;
 }
 .link{
-    color: orange;
+    color: #e3b0ff;
 }
 
 .grey{
     color: rgb(180, 180, 180);
+}
+
+a {
+    color: #e3b0ff
+}
+
+a:hover{
+    color: #a751d4;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 4px;
+}
+
+/*The background themes (base color is #1c1c1c)*/
+
+.theme1 {
+	background-color: #272727;
+}
+
+.theme2 {
+    background-color: #666666;
 }

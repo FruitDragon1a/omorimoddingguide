@@ -1,141 +1,11 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-	position: relative;
-	background-color: #050505;
-    color: #f9f9f9;
-	font-size: 16pt; /* Base font size */
-}
-
-
-.page{
-    font-family: 'Lora';
-    font-weight: normal;
-	width: 100%;
-	/*padding: 5vw;*/
-	margin: auto;
-	background-color: #1c1c1c;
-    transition: 0.5s;
-}
-
-/* Sidebar menu styling */
-.sidebar {
-    height: 100%;
-    width: 250px; /* Hidden by default */
-    position: fixed;
-    z-index: 2; /* Stay on top of other content */
-    top: auto;
-    left: -250px;
-    background-color: transparent;
-    background-image: url("../images/bgs/navbar.png");
-    background-size: cover;
-    overflow-x: hidden;
-    transition: left 0.5s ease; /* Smooth sliding effect */
-    padding-top: 60px;
-}
-
-.sidebar.open {
-  left: 0;               /* slide in */
-}
-
-/* Sidebar links */
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-/* Close button position */
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Style for the button that opens the sidebar */
-.openbtn {
-    color: #f9f9f9;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 5px 15px;
-    border: none;
-    background-color: transparent;
-}
-
-.overhead{
-    font-family: 'Spectral';
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    height: auto;
-    padding: 0.5em;
-	margin: auto;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    width: 100%;
-	background-color: #0A0A0A;
-}
-
-.footer {
-    font-family: 'Lora';
-    font-style: italic;
-    background-color: #0A0A0A;
-    height: auto;
-}
-
-.footer div {
-    margin: 10px;
-}
-
-.footer p {
-    margin-top: 10px;
-}
-
-.footer-license {
-    font-size: 0.5em;
-    color: #AAAAAA
-}
-
-.content{
-    flex-wrap: wrap;
-}
-
-
-
-.page-title {
-    font-family: 'Spectral';
-    font-weight: 500;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    background-color: transparent;
-    background-image: url("../images/title/PRL_SKY_GALAXY.png");
-    background-size: cover;
-    background-position: center 0;
-    overscroll-behavior: none;
-}
-
-.theme1 {
-	background-color: #272727;
-}
-
-.theme2 {
-    background-color: #666666;
-}
-
 .textbox {
     font-family: 'Lora';
     padding: 7% 10%;
     line-height: 1.5;
+}
+
+.textbox p {
+  margin-top: 30px;
 }
 
 .collection {
@@ -165,12 +35,7 @@ body {
 }
 
 .linkbox a {
-    color: #e3b0ff;
     text-decoration: none;
-}
-.linkbox a:hover {
-    color: #74438f;
-    background-color: transparent;
 }
 
 .tableofcontents li {
@@ -182,16 +47,91 @@ body {
     font-size: 0.75em;
 }
 
+.pagetitletext{
+    font-size: 2.5em;
+}
+
+.p-18 {
+    font-size: 1.125em; /* 18pt*/
+    font-weight: bold;
+}
+
+/*.header-stack {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-shrink: 3;
+    margin-left: 32px;
+    margin-right: 32px;
+    width: 50vw;
+}*/
+
+.header-paragraph {
+    text-align: center;
+}
+
+.namebox {
+    font-family: 'Lora';
+    padding: 7% 10%;
+    line-height: 1.5;
+}
+
+.header-paragraph h1 {
+    background-color: rgb(121, 121, 228);
+    font-size: 1.5em;
+}
+
+.header-paragraph p {
+    background-color: rgb(47, 85, 72);
+    margin: 0;
+}
+
+.center-tri-segment {
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.pfp {
+    width: 256px;
+    border-radius: 32px;
+    outline-color: lightgray;
+    outline-style: solid;
+    outline-width: 3px;
+}
+
+.sectionheader {
+    text-align: center;
+}
+
+.textbox.intro-paragraph {
+    margin: 0;
+}
+
+.intro-paragraph {
+    text-align: center;
+    font: 1.75em;
+}
+
 /* all styles for any screen larger than a phone go in here*/
 @media (min-width: 1028px) {
     .page{
         width: 80%;
-        max-width: 1244px;
+        max-width: 1248px;
         
     }
 
     .textbox {
         padding: 4% 7%;
+    }
+
+    .namebox {
+        padding: 4% 4%;
+    }
+    
+    .header-paragraph h1 {
+        font-size: 2.25em;
     }
 
     .collection {
@@ -208,20 +148,20 @@ body {
 
     .tableofcontents li {
         margin-left: 10vw;
-        font-size: 1.75em;
+        font-size: 2.25em;
     }
 
 }
 
 @media (min-width: 1744px) {
     .sidebar {
-        left: calc((100vw - 1244px) / 2 - 250px);
+        left: calc((100vw - 1248px) / 2 - 250px);
         transition: 0s;
         background-color: #111111;
     }
 
     .sidebar.open {
-        left: calc((100vw - 1244px) / 2 - 250px);
+        left: calc((100vw - 1248px) / 2 - 250px);
     }
 
     .openbtn {
@@ -237,73 +177,3 @@ body {
         
     }
 }
-
-.pagetitletext{
-    font-size: 2.5em;
-}
-
-h1 {
-  font-size: 2.25em; /* 2.5 * 16 = 40pt */
-  font-family: 'Spectral';
-}
-
-h2 {
-  font-size: 1.875em; /* 1.875 * 16 = 30pt */
-}
-
-p {
-  font-size: 0.75em; /* 1 * 16 = 16pt */
-  margin-top: 30px;
-}
-
-li {
-    font-size: 0.75em;
-
-}
-
-a {
-    color: orange
-}
-
-a:hover{
-    color: lightsalmon;
-    background-color: rgba(255,255,255,0.25);
-    border-radius: 4px;
-}
-
-.p-18 {
-    font-size: 1.125em; /* 18pt*/
-    font-weight: bold;
-}
-
-.header-stack {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-shrink: 3;
-    margin-left: 32px;
-    margin-right: 32px;
-    width: 50vw;
-}
-
-.center-tri-segment {
-    display: flex;
-    align-content: flex-end;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.sectionheader {
-    text-align: center;
-}
-
-.pfp {
-    width: 256px;
-    border-radius: 32px;
-    outline-color: lightgray;
-    outline-style: solid;
-    outline-width: 3px;
-}
-
-
-

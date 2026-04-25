@@ -2,8 +2,8 @@ class SiteNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="#">Setup</a>
         <a href="#">Github</a>
         <a href="#">YAML Files and Dialogue</a>
