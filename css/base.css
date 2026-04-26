@@ -3,28 +3,79 @@
 body {
 	position: relative;
 	background-color: #050505;
+    background-image: url("../images/bgs/SAVE_MENU_BG.png");
+    backdrop-filter: blur(1px);
     color: #f9f9f9;
 	font-size: 16pt; /* Base font size */
 }
 
 
 h1 {
-  font-size: 2.25em; /* 2.5 * 16 = 40pt */
-  font-family: 'Spectral';
+    font-size: 2.25em; /* 2.5 * 16 = 40pt */
+    font-family: 'Spectral';
 }
 
 h2 {
-  font-size: 1.875em; /* 1.875 * 16 = 30pt */
+    font-size: 1.875em; /* 1.875 * 16 = 30pt */
 }
 
 p {
-  font-size: 0.75em; /* 1 * 16 = 16pt */
+    font-size: 0.75em; /* 1 * 16 = 16pt */
+}
+
+code {
+    font-size: 0.9em;
+    padding: 0.25em;
+    background-color: #4b4b4b;
+    background-size: 1.25em;
+    border-radius: 5px;
 }
 
 li {
     font-size: 0.75em;
 
 }
+
+hr {
+    border-color: white;
+    border-width: 0.05em;
+    border-radius: 0px;
+    border-style: solid;
+}
+
+legend {
+    border-radius: 16px;
+    background-color: #4b4b4b;
+    border-color: white;
+    border-style: none;
+    border-width: 1px;
+    padding: 0.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+fieldset {
+    border-radius: 32px;
+    font-family: 'Spectral';
+    background-color: #4b4b4b;
+    border-style: none;
+    padding: 0.5em;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid gray;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: inset 2em 2em white;
+    border: 0.15em solid white;
+
+}
+
 
 .page{
     font-family: 'Lora';
@@ -42,7 +93,7 @@ li {
     width: 250px; /* Hidden by default */
     position: fixed;
     z-index: 2; /* Stay on top of other content */
-    top: auto;
+    top: 0;
     left: -250px;
     background-color: transparent;
     background-image: url("../images/bgs/navbar.png");
@@ -53,7 +104,7 @@ li {
 }
 
 .sidebar.open {
-  left: 0;               /* slide in */
+    left: 0;               /* slide in */
 }
 
 /* Sidebar links */
@@ -102,6 +153,13 @@ li {
     top: 0;
     width: 100%;
 	background-color: #0A0A0A;
+    z-index: 1;
+}
+
+.overhead img {
+    height: 2em;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer {
@@ -128,8 +186,6 @@ li {
     flex-wrap: wrap;
 }
 
-
-
 .page-title {
     font-family: 'Spectral';
     font-weight: 500;
@@ -144,4 +200,5 @@ li {
     background-size: cover;
     background-position: center 0;
     overscroll-behavior: none;
+    box-shadow: inset 0 0 32px 1em black;
 }

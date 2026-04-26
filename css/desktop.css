@@ -61,6 +61,11 @@
         font-size: 2.25em;
     }
 
+    /*Used in some flexboxes*/
+    .i-wanna-make-it-bigger {
+        width:200%
+    }
+
 }
 
 /*dont put anything in here, this is just to make the sidebar thing work, use the other @media*/

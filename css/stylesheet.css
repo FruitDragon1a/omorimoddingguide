@@ -92,6 +92,11 @@
     margin-bottom: 20px;
 }
 
+.namebox-text li {
+    text-align: left;
+    margin-left: 5em;
+}
+
 .namebox-links {
     border-radius: 15px;
     background-color: #4b4b4b;
@@ -129,3 +134,37 @@
     font: 1.75em;
 }
 
+.sprite-container {
+    margin: 20px;
+    padding: 32px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.sprite-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sprite-container figcaption {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.sprite-container footer {
+    font-size: 0.5em;
+    text-align: center;
+    font-family: 'Lora';
+    font-style: italic;
+    color: rgb(180, 180, 180);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

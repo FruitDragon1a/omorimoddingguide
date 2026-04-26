@@ -28,7 +28,15 @@ a:hover{
 .theme1 {
 	background-color: #272727;
 }
-
+/* For some reason this will always override theme2 for which its not supposed to.
+.theme1 hr {
+    border-color: #272727;
+}
+*/
 .theme2 {
     background-color: #666666;
+}
+
+.theme2 hr {
+    border-color: #666666;
 }

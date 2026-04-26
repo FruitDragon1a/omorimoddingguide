@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta charset="utf-8">
+	<title>Sprites & Art - OMORI Modding Guide</title>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/desktop.css" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/templates.js" defer></script>
+    <script src="../js/functions.js" defer></script>
+
+
+</head>
+<body>
+
+    
+    <!-- The button that triggers the sidebar -->
+     
+     <div class="page">
+        
+        <div id="siteNavigation" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <site-nav></site-nav>
+            
+        </div>
+        
+        <nav class="overhead"><button onclick = "openNav()" class="openbtn">☰</button> OMORI MODDING GUIDE</nav>
+
+        <div class="content">
+
+            <div class="page-title">
+                
+                <h1 class="pagetitletext">Sprites & Art</h1>
+
+            </div>
+
+            <div class="textbox">
+                <p style="margin:0;" class="intro-paragraph">
+                    Now, I hear what some of you are thinking,<br>
+                    <em>“Events and tilemaps are nice and all, but I don’t want them to look like they do. What if my mod takes place in the war-tattered wreckage of the <span class="name">Black Mesa Research Facility</span>? How do I make that?”</em><br>
+                    Well, styling is a whole page's worth of detail, but I can tell you how to format that art from a technical viewpoint.<br>
+                    This page will detail the formatting for every image type used in OMORI.
+                </p>
+            </div>
+
+            <div class="textbox theme1">
+                <h1 class="sectionheader">Overworld Sprites</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    The majority of overworld sprites in OMORI are stored in the <code>img/characters</code> folder as spritesheets, hence they are also referred to as "Character Sprites." These are the images that Events can be set to use. Now before I show you all the ways these can be set up, I’ll show you how these work at a basic level.
+                </p>
+
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            This is the most basic spritesheet you can have in OMORI.<br>
+                            They are made up of eight 3*4 sets of sprites, all uniform in size. The size of the sprites between spritesheets can vary, as long as they follow this format. Each of these eight sets make up a <span class="key">pattern</span>, as they are internally called. These patterns will have three sprites of movement in the four cardinal directions as pictured below. You don’t need to do anything to make the animations work aside from lining them up correctly.
+                        </p>
+                    </div>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/DW_NPC_10.png"alt="A spritesheet of the Slime Girls."/>
+                        <figcaption>A very standard spritesheet.</figcaption>
+                        <footer>Source: DW_NPC_10, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            Now, as you can see here, Capt. Spaceboy’s spritesheet—while sized the same—has a few patterns that don’t follow this structure at all. Many spritesheets will also store character animations in the same sheet. These are called through scripts in the event coding.
+                        </p>
+                    </div>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/DW_SBF.png"alt="A spritesheet of the Capt. Spaceboy."/>
+                        <figcaption>A spritesheet containing extra specialized animations.</figcaption>
+                        <footer>Source: DW_SBF, OMORI</footer>
+                    </figure>
+                </div>
+                <p class="intro-paragraph">
+                    Now, this is actually just one of five ways that these sheets can be set up, and the way these formats are chosen is by their file name. RPG Maker MV and plugins will check the filenames of all loaded spritesheets to see how to split them. I will show you now what these look like.
+                </p>
+                <div class="namebox theme2" style="align-items: stretch;">
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/$popcorngirl.png"alt="A spritesheet of Popcorn Girl."/>
+                        <figcaption>Sheets starting with <code>$</code> will be treated as having just one pattern rather than eight.</figcaption>
+                        <footer>Source: $popcorngirl, OMORI</footer>
+                    </figure>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/!objects_pizza_doors_1.png"alt="A spritesheet of various doors."/>
+                        <figcaption>By default, all events are visually offset six pixels upwards from the map for perspective reasons. Adding a <code>!</code> to the beginning of a sheet disables this.</figcaption>
+                        <footer>Source: !objects_pizza_doors_1, OMORI</footer>
+                    </figure>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/$DW_AUBREY_RUN.png"alt="A spritesheet of Aubrey running."/>
+                        <figcaption>Sheets ending with <code>%(x)</code> will have <code>x</code> walking frames as opposed to three. This only works with <code>$</code> characters.</figcaption>
+                        <footer>Source: $DW_AUBREY_RUN%(8), OMORI</footer>
+                    </figure>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/[SF]Hero_Frame.png"alt="A sprite of Hero's face in the Last Resort."/>
+                        <figcaption>Sheets starting with <code>[SF]</code> will be treated as one single frame rather than a full sheet.</figcaption>
+                        <footer>Source: [SF]Hero_Frame, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Dialogue & Battle Portraits</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    These made a brief mention in the Dialogue Section, but we might as well go slightly more in depth for sake of completeness. All dialogue portraits are stored in the <code>img/faces</code> folder and follow a very specific format that can't be deviated from. 
+                </p>
+                <div class="namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Dialogue Facesets</h1>
+                        <p>
+                            Each image (as in png file) is a <span class="key">faceset</span> containing four 106*106px faces per row, with a practically unlimited amount of columns.<br>
+                            <br>
+                            Each face in the faceset has a number assigned to it, being its <span class="key">faceindex</span>. These start at 0 and go left to right, top to bottom. This is how they are selected in the dialogue files.<br>
+                            <br>
+                            As you can see, many dialogue sheets store multiple characters at once. In general, especially for larger mods, this can help a lot to cut down on the number of images you have in your <code>faces</code> folder, though ultimately it's your preference.<br>
+                            <br>
+                            <em>If you have trouble keeping track of what index each face has, a good practice is to add black numbers in the corner of each slot that state the number. Since they are black they will not be visible against the in-game text box.
+                            This method does not work with custom windowskins, like the ones seen in mods such as <a href="https://mods.one/mod/brokendreams" target="_blank">BROKEN DREAMS</a> or <a href="https://mods.one/mod/rewritten" target="_blank">REWRITTEN</a>.</em>
+                        </p>
+                        <br><br>
+                        <fieldset>
+                            <legend>Faceset Visualizers</legend>
+                            <input type="checkbox" id="mari-frames" onchange="setMariOverlay()"/>
+                            <label for="mari-frames">Show frame borders</label>
+                            <br>
+                            <input type="checkbox" id="mari-numbers" onchange="setMariOverlay()"/>
+                            <label for="mari-numbers">Show faceindexes</label>
+                        </fieldset>
+                    </div>
+                    <figure class="sprite-container">
+                        <div style="position: relative;">
+                            <img src="../images/sprites/MainCharacter_Mari.png"alt="The faceset for Mari, also featuring other characters.">
+                            <img class="img-overlay" src="../images/sprites/MainCharacter_Mari_Frames.png" id="mari-frames-img" style="display: none;"/>
+                            <img class="img-overlay" src="../images/sprites/MainCharacter_Mari_Numbers.png" id="mari-numbers-img" style="display: none;"/>
+                        </div>
+                        <figcaption>The faceset for Mari, also featuring other characters.</figcaption>
+                        <footer>Source: MainCharacter_Mari, OMORI</footer>
+                    </figure>
+                    <script type="text/javascript">
+                        function setMariOverlay() {
+                            const activateFrames = !!document.getElementById("mari-frames").checked;
+                            const activateNumbers = !!document.getElementById("mari-numbers").checked;
+                            document.getElementById("mari-frames-img").style.display = activateFrames ? "" : "none";
+                            document.getElementById("mari-numbers-img").style.display = activateNumbers ? "" : "none";
+                        };
+                    </script>
+                </div>
+                <br>
+                <div class="namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Battle Facesets</h1>
+                        <p>
+                            Battle portraits operate very similarly to dialogue portraits are also 106*106px.
+                            Unlike dialogue portraits though, battle portraits are stored in rows of three, each row being the frames of animation used for a specific emotion. They will loop from left to right.
+                            <br><br>
+                            The rows used for each emotion are coded into the states, so if you are making new sheets, you must follow this format:
+                            <ol start="0">
+                                <li>Neutral</li>
+                                <li>Happy</li>
+                                <li>Ecstatic</li>
+                                <li>Afraid & Plot Armor</li>
+                                <li>Sad</li>
+                                <li>Depressed</li>
+                                <li>Angry</li>
+                                <li>Enraged</li>
+                                <li>Unconscious</li>
+                                <li>Hurt</li>
+                                <li>Victory</li>
+                                <li>Manic</li>
+                                <li>Miserable</li>
+                                <li>Furious</li>
+                                <li>Stressed Out</li>
+                            </ol>
+                        </p>
+                        <p>If you want more emotions you must extend the faceset lower down by adding more rows.</p>
+                        <br><br>
+                    </div>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/01_OMORI_BATTLE.png"alt="The battle faceset for Omori.">
+                        <figcaption>The battle faceset for Omori.</figcaption>
+                        <footer>Source: 01_OMORI_BATTLE, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Enemy Battle Sprites</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Enemy battle sprites are stored in two locations.<br>A single neutral frame of the enemy is stored in the <code>img/enemies</code> folder, while the full sheet is stored in the <code>img/sv_actors</code> folder.
+                </p>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            The full sheet in the <code>sv_actors</code> folder operates similarly to the party battle portraits. Each row contains four sprites, however frame two and four are identical to make the animation look like <code>1,2,3,2,1</code> instead of <code>1,2,3,1</code>.
+                            <br><br>
+                            Unlike the party members, the sprites called for each emotion are done manually by every enemy, so you can put them in any order you like. However, they will usually go:
+                            <br><br>
+                            <ol start="0">
+                                <li>Neutral</li>
+                                <li>Hurt</li>
+                                <li>Defeat</li>
+                                <li>Sad</li>
+                                <li>Angry</li>
+                                <li>Happy</li>
+                            </ol>
+                        </p>
+                        <p>
+                        <br><br>
+                        <figure class="sprite-container">
+                            <img src="../images/sprites/!battle_sprout_mole_solo.png"alt="A spritesheet of a Lost Sprout Mole."/>
+                            <figcaption>The <code>enemies</code> sprite for the Lost Sprout Mole.</figcaption>
+                            <footer>Source: !battle_sprout_mole, OMORI</footer>
+                        </figure>
+                    </div>
+                    <figure class="sprite-container">
+                        <img src="../images/sprites/!battle_sprout_mole.png"alt="A spritesheet of a Lost Sprout Mole."/>
+                        <figcaption>The <code>sv_actors</code> sheet for the Lost Sprout Mole.</figcaption>
+                        <footer>Source: !battle_sprout_mole, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class="namebox theme2" style="justify-content: column;">
+                    <div>
+                        <h1 class="sectionheader" style="margin: 0;">Extra Tidbits</h1>
+                        <p style="margin: 0" class="intro-paragraph">Some extra specifications that are best with an image example.</p>
+                        <div class="namebox theme2" style="align-items: stretch;">
+                            <figure class="sprite-container">
+                                <img src="../images/sprites/!battle_basil_something.png"alt="The spritesheet for Basil."/>
+                                <figcaption>Enemies such as Basil or the Somethings don't use emotions or other indexes. In these cases they can be excluded..</figcaption>
+                                <footer>Source: !battle_basil_something, OMORI</footer>
+                            </figure>
+                            <figure class="sprite-container i-wanna-make-it-bigger">
+                                <img src="../images/sprites/!battle_omori.png"alt="The spritesheet for Omori."/>
+                                <figcaption>Unlike most other enemies, Omori has three frames of animation as opposed to four.</figcaption>
+                                <footer>Source: !battle_omori, OMORI</footer>
+                            </figure>
+                            <figure class="sprite-container">
+                                <img src="../images/sprites/!battle_sweetheart.png"alt="The spritesheet for Sweetheart."/>
+                                <figcaption>Enemies that feel 2<sup>nd</sup> and 3<sup>rd</sup> stage emotions can store their frames at the bottom.</figcaption>
+                                <footer>Source: !battle_sweetheart, OMORI</footer>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Battle Backgrounds</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Battle backgrounds, or <span class="key">battlebacks</span> as they are often called, are really easy to make. They are stored in the <code>img/battlebacks1</code> folder.
+                </p>
+                <div class="namebox theme2" style="justify-content: column;">
+                    <div>
+                        <p style="margin: 0" class="intro-paragraph">
+                            Technically speaking, you may place any 640x480 image in the folder and it will be usable as a battleback; however, OMORI uses a very specific style for its battlebacks. Specifically, OMORI uses dithered stock photos for its battlebacks.
+                            <br><br>
+                            OMORI sources its photos from <a href="https://www.pexels.com"target="_blank">Pexels</a> and <a href="https://www.pixabay.com"target="_blank">Pixabay</a>, which I would also recommend, as the photos are all free and watermarkless. Once you have your photo, you must crop and/or scale it down to 640*480px, and then place it through a dithering tool. <a href="https://www.adobe.com/products/photoshop.html"target="_blank">Photoshop</a> gives the most accurate results, but <a href="https://ditherit.com"target="_blank">Dither it</a> gives good results too.
+                            <br><br>
+                            What is dithering, though? It’s basically just reducing the color palette of the given image by using alternating pixels to mimic more shades. That makes the image retain its depth, but become small in file size. It also has a very specific, unique effect on images that frankly just sorta looks cool.
+                        </p>
+                        <div class="namebox theme2" style="align-items: stretch;">
+                            <figure class="sprite-container">
+                                <img src="../images/Ned_Flanders.png"alt="The original photo."/>
+                                <figcaption>Original Image</figcaption>
+                                <footer>Source: </footer>
+                            </figure>
+                            <figure class="sprite-container">
+                                <img src="../images/Ned_Flanders.png"alt="The photo cropped."/>
+                                <figcaption>Cropped to 640*480</figcaption>
+                            </figure>
+                            <figure class="sprite-container">
+                                <img src="../images/Ned_Flanders.png"alt="The photo after being dithered."/>
+                                <figcaption>Dithered in Dither it</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer collection">
+            <div>
+                <p>FruitDragon & TomatoRadio's OMORI Modding Guide</p>
+                <p>Special thanks to the OMORI team & the OMORI Modding Community</p>
+            </div>
+            <div>
+                <p>If you notice any issues with this guide, please contact us or fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXdD5rLUAXPWWhukX_SphcPSs3mYO9W6PG9jbDZsjc7HvwiA/viewform?usp=publish-editor" target="_blank">this form</a>. </p>
+                <p class="footer-license">All templates provided under MIT license. All base game assets provided with open access to source material. All other resources are provided under the licenses assigned by their creators.</p>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
