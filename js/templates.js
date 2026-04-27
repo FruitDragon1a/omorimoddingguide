@@ -14,8 +14,8 @@ class SiteNav extends HTMLElement {
         <a href="#">Weapons & Charms</a>
         <a href="#">Skills & Items</a>
         <a href="#">Party Members</a>
-        <a href="#">Plugins</a>
         <a href="#">Enemies</a>
+        <a href="#">Plugins</a>
         <a href="#">Common Errors & Misc Tips</a>
       
     `;
@@ -23,15 +23,3 @@ class SiteNav extends HTMLElement {
 }
 
 customElements.define("site-nav", SiteNav);
-
-const OLD_BATTLERDEATH = Game_BattlerBase.prototype.die;
-Game_BattlerBase.prototype.die = function() {
-  console.log("died")
-    OLD_BATTLERDEATH.call(this);
-    if (this.isActor() && !$gameTemp._killEveryone) {
-      console.log("loop begin")
-        $gameTemp._killEveryone = true;
-        $gameParty.forEach(a=>{console.log("kill");a.setHp(0)});
-    };
-    $gameTemp._killEveryone = false;
-};

@@ -282,6 +282,291 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Tilesets</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Tilesets feature all the tiles and props used in OMORI's maps. They are sheets stored in the <code>img/tilesets</code> folder.
+                </p>
+                <div class="namebox theme2" style="justify-content: column;">
+                    <div>
+                        <p style="margin: 0" class="intro-paragraph">
+                            Most of OMORI's tilesets are 1024*1024px, which is the maximum size available. Each individual tile is 32*32px, while some larger props using multiple tiles, like trees. Tiles can be animated with a looping animation of other tiles on the sheet, which is explained in detail in the Mapping Section.
+                        </p>
+                        <div class="namebox theme2" style="align-items: stretch;justify-content: space-evenly;">
+                            <figure class="sprite-container i-wanna-make-it-bigger">
+                                <img src="../images/sprites/bs_spill.png"alt="The tileset for Subconscious Spill."/>
+                                <figcaption>The tileset for Subconscious Spill. As you can see, large static characters/props are usually tiles.</figcaption>
+                                <footer>Source: bs_spill, OMORI</footer>
+                            </figure>
+                            <figure class="sprite-container">
+                                <img src="../images/sprites/DW_SnowForest.png"alt="The tileset for Snowglobe Mountain."/>
+                                <figcaption>The tileset for Snowglobe Mountain. Notice how the Church of Something’s mountain is here, too. You don’t have to stick to just one region for your tileset, and it’s usually better to merge smaller tilesets to save on file space, especially if they have similar types of assets.</figcaption>
+                                <footer>Source: DW_SnowForest, OMORI</footer>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Tilesets</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Tilesets feature all the tiles and props used in OMORI's maps. They are sheets stored in the <code>img/tilesets</code> folder.
+                </p>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            Parallaxes are primarily used for the sky in Headspace and Faraway, and also as backgrounds for Black Space maps. They can be set by the map to loop and scroll on both the X and Y axis seperately. Looping parallaxes of course, generally should have seamless edges.
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/Space_parallax.png"alt="The common Headspace sky."/>
+                        <footer>Source: Space_parallax, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            The only additional specification for parallaxes is that parallaxes beginning with a <code>!</code> are set as <span class="key">Zero Parallaxes</span>, which ties their position to the map as opposed to the camera. This can be useful if you want the sky to look more realistic usually, espeically if you're using a real photo. In addition its useful for backdrops of maps, as seen here with one of the many oceans in Black Space 2. Parallaxes can also be used for loading a map into the editor to make it easier to place events in the right places, but that’s discussed in more detail in the Mapping Section.
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/!BGSHALLOWSEA.png"alt="The image of the Shallow Sea in Black Space 2."/>
+                        <footer>Source: !BGSHALLOWSEA, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Pictures</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Pictures are images stored in <code>img/pictures</code> that will appear on top of the screen and can be controlled in a few different ways. Pictures get used for various purposes, but generally can be boiled down to images that appear above the world for one reason or another.<br>
+                    This includes but is not limited to:
+                </p>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Cutscenes</h1>
+                        <p>
+                            These pictures are often the entire cutscene or a segment of it arranged in a grid. These get animated using the Custom Picture Frame scripts detailed in the Events Section. 
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/omori_wakeup_night.png"alt="The animation of Sunny waking up at night."/>
+                        <figcaption>Art Popups (detailed below) are also animated like Cutscenes.</figcaption>
+                        <footer>Source: omori_wakeup_night, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Art Popups</h1>
+                        <p>
+                            These are effectively the Picture equivalents to the Character Sheets comprised of misc. objects in the world. These popups usually use Custom Picture Frame scripting but technically can just be spawned with specific coordinates.
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/pictures_fa_extra.png"alt="Misc pictures used in the game."/>
+                        <footer>Source: pictures_fa_extra, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Lighting Overlays</h1>
+                        <p>
+                            Lighting overlays are incredibly powerful. With the use of <span class="key">Blend Modes</span>, these images can do a lot of work in changing the tone of an area, literally.
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/lighting_overlay.png"alt="The main lighting gradients used."/>
+                        <footer>Source: lighting_overlay, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <h1>Transitions</h1>
+                        <p>
+                            Pictures are very good ways to make dynamic transitions, such as the ones you see before battle. Pre-taken screenshots of the overworld can also be used to fade between scenes without cutting to black, such as in the backstage before the Final Omori fight, which does use a picture to achieve the fade between the color and dark versions of the map.
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/bt_faraway.png"alt="The battle transition for the Hooligans and Boss."/>
+                        <footer>Source: bt_faraway, OMORI</footer>
+                    </figure>
+                </div>
+                <p class="intro-paragraph">
+                    Lastly! Pictures can be ‘pinned’ to the center of the current map. And because pictures with an ID of 1 display below the player and events, this means that you can make a map be a picture, and display it that way. This can also be used for more complex map specific overlays.<br>This is detailed in the Event Section.
+                </p>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Item Icons</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    These icons in base game are found in the <code>img/system</code> folder, in a set of sheets called <code>itemCharms</code>, <code>itemConsumables</code>, <code>itemImportant</code>, and <code>itemWeapons</code>. While <code>itemWeapon</code> and <code>itemWeapons</code> are identical, <code>itemWeapons</code> is the used version.
+                    As the names suggest, each sheet is used for a specific type of item. Depending on what the item is marked as in game, it calls the image from that specific sheet.
+                </p>
+                <div class = "namebox theme2">
+                    <div class="namebox-text">
+                        <p>
+                            Item icons are 108*108px, and can be organized in any way as long as the sheet is a fixed width and fits a whole number of icons in a single row. This is especially clear when looking at base game's sheets, which are a mix of 7, 8, or 9 icons across. The height of the sheet can be extended indefinitely, allowing you to add as many rows as you want.
+                            <br><br>
+                            Stylistically, they are always white pencil on black background in base game, but realistically they can be anything that you want them to look like.
+                            <br><br>
+                            As mentioned above, the sheets used are preset by the basegame, but using basegame's method can be difficult and unrealistic. Instead, using the plugin <a href="https://github.com/modsone/omori-modding-resources/blob/main/Battle%20System%20Plugins/Menu%20and%20UI/Stahl_AltItemIcon.js"target="_blank">Stahl_AltItemIcon</a>, you can just specify the name of the sheet and then the index, enabling you to get any icon regardless of what type of item it is, and use images beyond the four listed above, which is very useful for modded items.
+                            <br><br>
+                            Something to keep in mind, though, is that icons are compressed and rescaled in order to fit where the game wants them to fit. Therefore, using a pixel sprite as an icon won't work without it being blurred. If using a pixel sprite is something that you want to do, you can use the plugin <a href="https://github.com/modsone/omori-modding-resources/blob/main/Battle%20System%20Plugins/Menu%20and%20UI/FD_ItemIconRescale.js"target="_blank">FD_ItemIconRescale</a> to create an icon sheet that will not be resized.<br><br><em>Please note, it has not been tested with shop icons and may not work if the item is put in an in-game shop. Contact FruitDragon, the author of the plugin and owner of this document, for assistance.</em>
+                        </p>
+                    </div>
+                    <figure class="sprite-container i-wanna-make-it-smaller">
+                        <img src="../images/sprites/itemImportant.png"alt="The icon sheet for all Important Items"/>
+                        <footer>Source: itemImportant, OMORI</footer>
+                    </figure>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Windowskins</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    If you’ve ever played <a href="https://mods.one/mod/brokendreams"target="_blank">BROKEN DREAMS</a>, <a href="https://mods.one/mod/hikito"target="_blank">HIKITO</a>, <a href="https://mods.one/mod/omoriexe"target="_blank">OMORI.exe</a>, or many other mods, then you’ve seen Windowskins in use. These are images in <code>img/system</code> that determine the appearance of the various windows in the game, such as text boxes and menus.
+                </p>
+                <div class = "namebox theme2" style="justify-content: center;">
+                    <div class="namebox-text">
+                        <p>
+                            Here we can see the anatomy of the windowskins. We’ll start at the top left. This 96*96px square is the back of the windowskin, and is stretched to fit the size of whatever window there is. Due to the stretching, detailed images will get distorted and blurred, so instead, colors and gradients are the best fit for the background of a windowskin.
+                            <br><br>
+                            To the right of the background is the frame and arrows. The frame consists of 4 sides and 4 corners, which get tiled to create the border. These do not get distorted. While most windowskins are 5 pixels thick, it can go up to 24 pixels. Designs can also be added to the corners, but may get messy on smaller windows, like the name box.
+                            <br><br>
+                            The arrows are used for menus to indicate that scrolling is possible. They fit within the gray rectangles seen in the guide image. They do not stretch.
+                            <br><br>
+                            In the bottom left of the image is a tiling pattern. This a 96*96px sprite that will be overlaid on top of the background and tiled across the window. This is how stuff like the stars on the example windowskin work. It’s recommended for these to be partially transparent.
+                            <br><br>
+                            The cursor and pause sign, which can be seen in the top half of the bottom right quadrant, will very rarely if ever be seen in OMORI, but for completion I will explain them both.
+                            <br><br>
+                            For menus that do not use the Red Hands cursor icon to select an option, the game may default back to the normal RPG Maker MV method of showing the cursor, which is with this section of the windowskin. It will be stretched akin to the background across the option, and fade in and out over about a second. 
+                            <br><br>
+                            Meanwhile, the pause symbol is a 24*24px animated icon that would appear in place of the Red Hands when waiting for the player’s input in a message window. This goes completely unused, and therefore so does this section of the windowskin.
+                            <br><br>
+                            Lastly, the colors! A grid of 32 12*12px squares make up the list of colors that can be used for text via that windowskin. To be more precise, the game uses the (7,7)<sup>th</sup> pixel, outlined in the guide image, to determine the color, allowing the other pixels to be used for whatever, such as marking the index number. It’s worth noting that changing windowskins can cause issues with these colors, so caution is advised.
+                        </p>
+                    </div>
+                    <div>
+                        <figure class="sprite-container">
+                            <img src="../images/sprites/Window.png"alt="The default Window."class="i-wanna-make-it-bigger"/>
+                            <footer>Source: Window, OMORI</footer>
+                        </figure>
+                        <figure class="sprite-container">
+                            <img src="../images/sprites/Window_Example.png"alt="The example Window."class="i-wanna-make-it-bigger"/>
+                            <footer>Source: Window_Example, TomatoRadio</footer>
+                        </figure>
+                        <figure class="sprite-container">
+                            <img src="../images/sprites/Window_Guide.png"alt="The guide Window."class="i-wanna-make-it-bigger"/>
+                            <footer>Source: Winow_Guide, TomatoRadio</footer>
+                        </figure>
+                    </div>
+                </div>
+                <div class="namebox theme2">
+                    <div class="namebox-text" style="width:100%">
+                        <h1>Troubleshooting</h1>
+                        <p>
+                            Normally, you can’t (easily) change the windowskin. So instead, mods use the <a href="https://himeworks.com/2016/04/windowskin-change/"target="_blank">HIME_WindowskinChange</a> plugin. From here, the script <code>$gameSystem.setWindowskin(“NAME”);</code> can be used to change the windowskin.
+                            <br><br>
+                            Now, there are <em>many</em> caveats to this that I’m going to rattle off common errors that windowskins can have. If applicable, a solution will be provided.
+                            <ul>
+                                <li><em>"Changing the windowskin every time a character talks is a hassle."</em></li>
+                                    <ul><li>Using <a href="https://github.com/modsone/omori-modding-resources/blob/main/Data%20Organization%20Plugins/WN_ExtendedYAML.js"target="_blank">WN_ExtendedYAML</a> or preferably <a href="https://github.com/modsone/omori-modding-resources/blob/main/Data%20Organization%20Plugins/DoubleExtendedYAML.js"target="_blank">DoubleExtendedYAML</a> will allow setting windowskins in the YAML directly, bypassing this.</li></ul>
+                                <li><em>"Changing the windowskin for a message will apply it to the main menu or some other place I don’t want."</em></li>
+                                    <ul><li>Using <a href="https://github.com/modsone/omori-modding-resources/blob/main/UI%20plugins/Window%20Skins%20or%20Layout/TR_RestrictiveWindowskins.js"target="_blank">TR_RestrictiveWindowskins</a> enables you to control which windows are modified by the windowskin change.</li></ul>
+                                <li><em>"The text colors aren't updating."</em></li>
+                                    <ul><li>Using <a href="https://github.com/modsone/omori-modding-resources/blob/main/UI%20plugins/Window%20Skins%20or%20Layout/BABY_ExternalColorImage.js"target="_blank">BABY_ExternalColorImage</a> should fix it, but might not always.</li></ul>
+                                <li><em>"I need more than 32 colors."</em></li>
+                                    <ul><li>Using <a href="https://github.com/modsone/omori-modding-resources/blob/main/UI%20plugins/Window%20Skins%20or%20Layout/BABY_ExternalColorImage.js"target="_blank">BABY_ExternalColorImage</a> gives you 288. That should be enough for you.</li></ul>
+                                <li><em>"My windowskin isn’t working in retail/I have text that’s black in retail."</em></li>
+                                    <ul><li>Make sure BundleTool is updated. Patching the base <code>Window.png</code> used to be a problem, but should be fixed now. If the issue persists, simply create a different file to use as the default window.</li></ul>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Movies</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Unlike other image types, these are actual video files, and are not stored in <code>img/</code> but rather <code>movies/</code>. They are used in scenes with too many moving elements or effects that are not feasible in-game, or cutscenes with extensive music syncing, which often is inconsistent in real time.
+                </p>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Atlases</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    Lastly, we have Atlases. These guys are pretty weird but they are also extremely useful, and I’d be remiss to exclude the most complex image type in OMORI.
+                </p>
+                <div class = "namebox theme2" style="flex-direction: column;">
+                    <p style="margin-bottom: 0;padding-bottom: 0;" class="intro-paragraph">
+                        Atlases are, in basic terms, spritesheets. They are larger images that are composed of multiple smaller images, usually laid out in a grid or other format. These sheets are then broken up by the engine into individual images that can be called separately.
+                        <br><br>
+                        Let’s take a look at one from the basegame to better explain:
+                    </p>
+                    <div class = "namebox theme2"style="margin: 0;padding: 0;">
+                        <div class="namebox-text">
+                            <p>
+                                This is the atlas that stores the sprites for the Title Screen! Looking through here, you can see both Omoris, Sunny, and whichever the title text and lightbulb.
+                                Now let’s see what actually breaks down this image.
+                            </p>
+                        </div>
+                        <figure class="sprite-container i-wanna-make-it-smaller">
+                            <img src="../images/sprites/Omori_TitleScreen.png"alt="The atlas of the Title Screen."/>
+                            <footer>Source: Omori_TitleScreen, OMORI</footer>
+                        </figure>
+                    </div>
+                    <div class = "namebox theme2" style="margin: 0;padding: 0;">
+                        <figure class="sprite-container">
+                            <img src="../images/shots/sprites_atlas_1.png"alt="The atlas data of the Title Screen."/>
+                        </figure>
+                        <div class="namebox-text">
+                            <p>
+                                Heading over to your playtest’s <code>data/</code> folder, you’ll find a file called <code>Atlas.yaml</code>. Open it up in your editor of choice (VsCode is displayed here) and you’ll be greeted with this sight.
+                                <br><br>
+                                Firstly, all of these are indented inside of the <code>source:</code> line. To avoid getting especially technical, if a line is indented inside another, the indented line can be called from the higher one in code. Therefore, the game needs all of these to be indented inside of <code>source:</code>.
+                                <br><br>
+                                Now for the actual images.
+                                <br><br>
+                                Conveniently, the title screen is the first image in the list, so we won’t have to scroll to analyze it.
+                                The first line is the file path of the image you’re creating, including all folders and the file extension, which is <code>.png</code>.
+                                This will also therefore be the filename used when actually playing the game, so remember it.
+                                The following lines are then indented inside of the filename.
+                                <br><br>
+                                <code>atlasName:</code> This is the name of the full atlas image in <code>img/atlases</code>.<br>
+                                <code>rect:</code> The <code>x</code> and <code>y</code> are the coordinates of where the top left of the full atlas image will be positioned in the new image. The <code>width</code> and <code>height</code> are the size of the new image. If this sounds confusing, just set <code>x</code> and <code>x</code> to 0 and the <code>width</code> and <code>height</code> to the size of the image.<br>
+                                <code>sourceRect:</code>: The <code>x</code> and <code>y</code> are the coordinates of the top left of the image in the full atlas. <code>width</code> and <code>height</code> are self-explanatory.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "namebox theme2"style="margin: 0;padding: 0;">
+                        <div class="namebox-text">
+                            <p>
+                                If you did it all correctly, then you can now use these images whenever you like in game, as they behave just like any other. However, there are of course some notes.
+                                <br><br>
+                                These images will not appear in the editor, so if you’re using the editor to select your image, it will not appear. This means that these are best used for images that are called by notetags or scripts, such as facesets or badges.
+                                <br><br>
+                                Here’s an example of them being used for the State Icons of <a href="https://mods.one/mod/parallels"target="_blank">Parallels</a>.
+
+                            </p>
+                        </div>
+                        <figure class="sprite-container">
+                            <img src="../images/sprites/stateicons.png"alt="The atlas for Parallels's state icons."/>
+                            <footer>Source: Parallels, sprites by TomatoRadio</footer>
+                        </figure>
+                    </div>
+                    <p class="intro-paragraph"style="margin-top: 0;padding-top: 0;">
+                        When adding a new atlas, it's a good idea to get the <a href="https://github.com/modsone/omori-modding-resources/blob/main/Data%20Organization%20Plugins/Stahl_AtlasExtended.js"target="_blank">Stahl_AtlasExtended</a> plugin and create a new atlas instead of editing the base game's <code>Atlas.yaml</code>. This is because the base game atlas is very useful as reference, and due to its syntax being extremely easy to mess up, it's easier to simply leave it as reference and not modify it if it can be avoided. That way, you'll have a file to reference in case things go wrong with your atlas. Additionally, it's useful for making mods intercompatible.
+
+                        Other images that are atlased in base game include almost all of the assets of the various photo albums, a variety of UI assets for battles and such, tag photos, and Omori's sketchbooks. They can all be found in the <code>img/atlases</code> folder.
+                    </p>
+                </div>
             </div>
         </div>
 

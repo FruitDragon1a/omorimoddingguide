@@ -66,6 +66,9 @@
         width:200%
     }
 
+    .i-wanna-make-it-smaller {
+        width: 50%
+    }
 }
 
 /*dont put anything in here, this is just to make the sidebar thing work, use the other @media*/

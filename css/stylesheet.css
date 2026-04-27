@@ -92,9 +92,14 @@
     margin-bottom: 20px;
 }
 
-.namebox-text li {
+.namebox-text ol {
     text-align: left;
     margin-left: 5em;
+}
+
+.namebox-text ul {
+    text-align: left;
+    margin-left: 2em;
 }
 
 .namebox-links {

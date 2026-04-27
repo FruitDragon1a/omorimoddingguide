@@ -91,7 +91,7 @@ input[type="checkbox"]:checked {
 .sidebar {
     height: 100%;
     width: 250px; /* Hidden by default */
-    position: fixed;
+    position: absolute;
     z-index: 2; /* Stay on top of other content */
     top: 0;
     left: -250px;
