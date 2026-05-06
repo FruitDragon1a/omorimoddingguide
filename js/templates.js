@@ -4,7 +4,7 @@ class SiteNav extends HTMLElement {
       
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="#">Setup</a>
+        <a href="setup.html">Setup</a>
         <a href="#">Github</a>
         <a href="#">YAML Files and Dialogue</a>
         <a href="#">Events</a>

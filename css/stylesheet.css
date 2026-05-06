@@ -173,3 +173,11 @@
     top: 0;
     left: 0;
 }
+
+.tooltip {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    
+}

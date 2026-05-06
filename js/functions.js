@@ -14,6 +14,14 @@ window.addEventListener("scroll", function () {
     // Adjust speed factor (0.5 = slower than scroll)
     const speed = 0.5;
 
+    /* 
+    //This allows for the sidebar to follow the scroll, however its not a 1:1 which bothers me so i left it.
+    const sidebar = document.getElementById("siteNavigation")
+    if (sidebar) {
+      sidebar.style["padding-top"] = (scrollY+"px");
+    }
+    */
+
     const page = document.querySelector(".page-title");
     if (page) {
         page.style.backgroundPosition = `center ${scrollY * speed}px`;

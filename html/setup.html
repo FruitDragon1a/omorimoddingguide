@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta charset="utf-8">
+	<title>Setup - OMORI Modding Guide</title>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/desktop.css" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/templates.js" defer></script>
+    <script src="../js/functions.js" defer></script>
+
+
+</head>
+<body>
+
+    
+    <!-- The button that triggers the sidebar -->
+     
+     <div class="page">
+        
+        <div id="siteNavigation" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <site-nav></site-nav>
+            
+        </div>
+        
+        <nav class="overhead"><button onclick = "openNav()" class="openbtn">☰</button>  OMORI MODDING GUIDE</nav>
+
+        <div class="content">
+
+            <div class="page-title">
+                
+                <h1 class="pagetitletext">Setup & Prerequsites</h1>
+
+            </div>
+
+            <div class="textbox">
+                <p style="margin:0;" class="intro-paragraph">
+                    Like the title suggests, this is a Step 0 towards getting your mod setup for creation. We’ll go over what programs you'll need for different types of mods and how to extract the game's files into formats usable in modding.<br>
+                </p>
+            </div>
+
+            <div class="textbox theme1">
+                <h1 class="sectionheader">Basic Requirements</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    These are all the things you will need for making any mod in OMORI.
+                </p>
+                <div class="namebox theme2" style="align-items: stretch;">
+                    <fieldset>
+                        <legend><a href="https://store.steampowered.com/app/1150690/OMORI/"target="_blank">OMORI</a></legend>
+                        <p>This should be obvious. But to be specific, you’ll want a v1.08 Steam release of the game in English. (This means that most pirated copies will run into issues when using some resources or playing specific mods.) You’ll also need to know where it is installed, for which you can locate game files by going to the gear-shaped “Manage” icon on OMORI’s Steam page in your library, hovering over “Manage” in the dropdown, and clicking “Browse Local Files".</p>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend><a href="https://mods.one/mod/oneloader"target="_blank">OneLoader</a></legend>
+                        <p>This is the tool used to load OMORI mods and decrypt the game's project file. Its page has detailed explanations on how to install it.</p>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend><a href="https://mods.one/mod/bt"target="_blank">BundleTool</a></legend>
+                        <p>This is not technically required, but it is a tool to compile your mods, which is much easier than doing manually. Also, don’t put this in the <code>mods</code> folder. This is for much later, when you’re ready to export your finished mod for others to play.</p>
+                        <br>
+                    </fieldset>
+                </div>
+                <p class="intro-paragraph">From here, all you need to do is load up OMORI and go to the <em>Decrypt</em> section of the mod menu. Then set the decrypt settings to <em>basegame</em> (If you want any loaded mods embedded in your mod you can put <em>everything</em>) and select <em>yes</em> for generating an RPG Maker MV project. Then start the decryption. You’ll now have a decompiled project file for your mod, usually called a <span class="key">Playtest Folder</span>.</p>
+                <br>
+                <hr class="theme2">
+                <br>
+                <h1 class="sectionheader">Specific Requirements</h1>
+                <p style="margin:0;" class="intro-paragraph">
+                    <em>“Okay. So I have my folder. Now what? What does this do? I bet I need more, don’t I?”</em><br>
+                    Right on, aspiring mod maker! However, what exactly you’ll need depends on the mod you’re making. Here’s a list to give you a decent idea of what you’d need.
+                </p>
+                <div class="namebox theme2" style="justify-content: column;">
+                    <div class="namebox-text">
+                        <h1 class="sectionheader" style="margin: 0;">Asset Replacement</h1>
+                        <p style="margin: 0" class="intro-paragraph">All you need is your own talent. There are plenty of free programs for image, text and audio editing/making. Here is what we personally use, however of course the true answer to the best program is the one you like. Do what works for you.</p>
+                        <br>
+                        <p class="note intro-paragraph">Note: Some programs here cost money. When applicable, they will be denoted with an *</p>
+                    </div>
+                    <div>
+                        <div class="namebox theme2" style="align-items: stretch; width:110%; justify-content: center;">
+                            <fieldset style="justify-content: center;">
+                                <legend>FruitDragon</legend>
+                                <ul>
+                                    <li><strong>Images:</strong></li>
+                                        <ul>
+                                            <li><a href="https://procreate.com/procreate"target="_blank">Procreate iPad</a>*</li>
+                                            <li><a href="https://www.clipstudio.net/en/purchase/"target="_blank">Clip Studio Paint Pro</a>*</li>
+                                            <li><a href="https://www.aseprite.org"target="_blank">Aseprite</a>*</li>
+                                        </ul>
+                                    <li><strong>Text:</strong></li>
+                                        <ul>
+                                            <li><a href="https://code.visualstudio.com"target="_blank">Visual Studio Code</a></li>
+                                        </ul>
+                                    <li><strong>Audio:</strong></li>
+                                        <ul>
+                                            <li><a href="https://www.apple.com/mac/garageband/"target="_blank">GarageBand</a></li>
+                                            <li><a href="https://musescore.org/en/download"target="_blank">MuseScore 4</a></li>
+                                            <li><a href="https://www.audacityteam.org/"target="_blank">Audacity</a></li>
+                                        </ul>
+                                </ul>
+                            </fieldset>
+                            <fieldset>
+                                <legend>TomatoRadio</legend>
+                                <ul>
+                                    <li><strong>Images:</strong></li>
+                                        <ul>
+                                            <li><a href="https://www.photopea.com/"target="_blank">Photopea</a></li>
+                                            <li><a href="https://www.aseprite.org"target="_blank">Aseprite</a>*</li>
+                                        </ul>
+                                    <li><strong>Text:</strong></li>
+                                        <ul>
+                                            <li><a href="https://code.visualstudio.com"target="_blank">Visual Studio Code</a></li>
+                                        </ul>
+                                    <li><strong>Audio:</strong></li>
+                                        <ul>
+                                            <li><a href="https://www.audacityteam.org/"target="_blank">Audacity</a></li>
+                                            <li><a href="https://github.com/DC37/Super-Mario-Paint/releases"target="_blank">Super Mario Paint</a></li>
+                                        </ul>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="namebox theme2" style="justify-content: column;">
+                    <div class="namebox-text" style="width: 100%;">
+                        <h1 class="sectionheader" style="margin: 0;">Editing/Adding Gameplay Elements</h1>
+                        <p style="margin: 0" class="intro-paragraph">You’ll need <a href="https://store.steampowered.com/app/363890/RPG_Maker_MV/"target="_blank">RPG Maker MV</a>. It’s usually $79.99 USD, but it often goes on sale for about $7.99-$12.99 USD during any seasonal Steam Sale. In addition the <a href="https://mods.one/mod/onemakermv">OneMaker MV</a> extension is greatly recommended for larger scale projects.
+                        <h1 class="sectionheader" style="margin: 0;">Editing/Adding Maps</h1>
+                        <p style="margin: 0" class="intro-paragraph">On top of RPG Maker MV, you will also need Tiled, an external program that with plugins, OMORI can convert into maps for ingame use. The original game uses the <a href="https://github.com/mapeditor/tiled/releases/tag/v1.0.3" target="_blank">1.0.3 version</a> of the program, and without plugin editing, you must use this version. However with <a href="https://github.com/modsone/omori-modding-resources/tree/main/ESSENTIAL%20plugins/tiledfixer" target="_blank">this fixer plugin</a>, the <a href="http://www.mapeditor.org/download.html" target="_blank">latest version</a> can be used as well, which is recommended for extra features and stability. 
+                        <h1 class="sectionheader" style="margin: 0;">Editing/Adding Plugins</h1>
+                        <p style="margin: 0" class="intro-paragraph">You gotta know JavaScript, or at least be able to understand it. It helps if you have knowledge of another coding language, even if you don’t know JavaScript specifically. With plugin programming, any IDE will work, and our personal preferences were listed above. If you want to learn Javascript, there’s a ton of free tutorials online. Other resources include the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"target="_blank">MDN Web Docs</a>, <a href="https://www.w3schools.com/js/"target="_blank">W3Schools</a>, and <a href="https://www.geeksforgeeks.org/javascript/"target="_blank">GeeksForGeeks</a>, especially if you’re just looking up how to do something specific (such as syntax or a certain method). The Internet is your friend when it comes to code!
+                    </div>
+                </div>
+            </div>
+
+            <div class="textbox">
+                <p style="margin:0;" class="intro-paragraph">
+                    Now with your Playtest Folder and all the programs you need for your mod, you're ready to begin!
+                </p>
+            </div>
+
+        <div class="footer collection">
+            <div>
+                <p>FruitDragon & TomatoRadio's OMORI Modding Guide</p>
+                <p>Special thanks to the OMORI team & the OMORI Modding Community</p>
+            </div>
+            <div>
+                <p>If you notice any issues with this guide, please contact us or fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXdD5rLUAXPWWhukX_SphcPSs3mYO9W6PG9jbDZsjc7HvwiA/viewform?usp=publish-editor" target="_blank">this form</a>. </p>
+                <p class="footer-license">All templates provided under MIT license. All base game assets provided with open access to source material. All other resources are provided under the licenses assigned by their creators.</p>
+            </div>
+        </div>
+        
+     </div>
+    
+  
+</body>
+</html>
