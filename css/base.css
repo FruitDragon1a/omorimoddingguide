@@ -211,7 +211,7 @@ input[type="checkbox"]:checked {
     background-size: cover;
     background-position: center 0;
     overscroll-behavior: none;
-    box-shadow: inset 0 0 32px 1em black;
+    box-shadow: inset 0 0 32px 0.5em rgba(0,0,0,0.5);
 }
 
 .note {
