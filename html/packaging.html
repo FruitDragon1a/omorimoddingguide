@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta charset="utf-8">
+	<title>Packaging - OMORI Modding Guide</title>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/colors.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/desktop.css" charset="utf-8"/>
+    
+    <link rel="icon" href="../images/icon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/templates.js" defer></script>
+    <script src="../js/functions.js" defer></script>
+
+
+</head>
+<body>
+
+    
+    <!-- The button that triggers the sidebar -->
+     
+     <div class="page">
+        
+        <div id="siteNavigation" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <site-nav></site-nav>
+            
+        </div>
+        
+        <nav class="overhead"><button onclick = "openNav()" class="openbtn">☰</button>  OMORI MODDING GUIDE</nav>
+
+        <div class="content">
+
+            <div class="page-title">
+                
+                <h1 class="pagetitletext">Packaging & Uploading</h1>
+
+            </div>
+
+            <p>Put stuff here
+
+        </div>
+
+        <!--
+        Full list of every param and what I know about it:
+        A "-" indicates that it is required in every mod.json
+        A "+" indicates that is used in most mod.jsons
+        A "*" indicates an outdated or unused feature
+        - id : String : it's the ModId, you know this
+        - name : String : the name used for priority UI and in the Mod Menu
+        - description : String : used in the Mod Menu
+        - version : String : Suffixed on the name in the Mod Menu
+        - manifestVersion : 1 : Used for checking the if the ModLoader is new enough to parse this mod.json
+        - _flags : String Array : An array of different processes to run
+            + do_olid : Tells the modLoader to run the deltaPatching process on images.
+            + package_json_editing : Tells the modLoader to edit the package.json file. (This handles some window properties)
+            + randomize_plugin_name : Makes every plugin in the mod get a randomized string for their name. Can be used for compatibility.
+            + prevent_disable : Prevents the mod from being disabled in the Mod Menu.
+        + packagejson_delta : Delta Param : The delta patch to apply if the "package_json_editing" flag is enabled.
+        - files : Object : The object that holds all the file groups for the mod to load.
+            + assets : String Array : An array of every new/edited file in the audio,fonts,img,and movies folder.
+            + plugins : String Array : An array of every new/edited plugin in the Plugin Manager.
+            + data : String Array : An array of every new/edited file in the data folder.
+            + maps : String Array : An array of every new/edited map/tileset in the maps folder.
+            + text : String Array : An array of every new/edited yaml file in the languages/en folder.
+            + raw : String Array : An array of every new/edited file that will NOT be encyrpted by the ModLoader.
+            * files : String Array : UNUSED.
+        + image_deltas : Delta Array : An array of every delta patch to run if the "do_olid" flag is enabled.
+            - patch : String : The file to patch.
+            - with : String : The olid to delta onto the file.
+            - dir : false : Always false. It also doesn't seemingly get referenced anywhere I can find.
+        + plugin_parameters : Object : An object containing every plugin to edit the parameters for
+            - PLUGIN-NAME : Delta Patch : The key needs to be the all-lowercase plugin filename and the value is the delta-patch.
+        + game_icon : String : The file to set the window icon to. Multiple mods that change the icon will cancel out to the default.
+        - $schema : URL : https://rph.space/oneloader.manifestv1.schema.json
+        + priority : Number : The sorting order for loading mods. By default every mod uses 0. Higher numbers get loaded first.
+        + plugins_ordered : Object Array : An array of specific ordering to use for plugins in files.plugins.
+            - PLUGIN-NAME : Object : The key needs to be the all-lowercase plugin filename and the value is an object with the properties listed below.
+                + at : Number : Determines the group assigned to the load process. Groups (at>0), (at==0), and (at<0) are loaded after the base plugins and then in the order listed here.
+                + weight : Number : If using the "at" property, then this specifies the ordering inside the above groups. Higher number is loaded sooner.
+                + after : String : Loads the plugin after the plugin listed (all-lowercase). "at" does not work here, but "weight" does.
+        + asyncExec : Object Array : An array of async data objects
+            - file : String : The name (proper casing, directory, and extension) of the plugin file to run.
+            - runat : String : The stage of the ModLoader at which to run the plugin. The list is as follows (in order of execution):
+                - "when_discovered" : Runs when the mod.json is first parsed. Before any "files" parsing.
+                - "when_discovered_2" : Runs after parsing "files.assets" and "files.raw"
+                - "when_discovered_3" : Runs after all other "files" are parsed.
+                - "exclusion_processor" : Runs after parsing the compatibility properties. (the 4 listed below asyncExec)
+                - "exclusion_processor2" : Runs after passing compatibilty checks.
+                - "pre_stage_2" : Runs before injecting "files" into the game.
+                - "post_stage_2" : Runs after injecting "files" into the game.
+                - "pre_start_game" : Runs before the ModLoader starts booting the game.
+                - "pre_plugin_injection" : Runs before the "files.plugins" are injected into the game.
+                - "pre_window_onload" : Runs before the game starts.
+        // All of these can be handled with DenyInjection.js and in general you should use that.
+        * requires : String Array : An array of modIds that must be loaded alongside the mod. If not the game loads in safe mode.
+        * excludes : String Array : An array of modIds that can't be loaded alongside the mod. If they are the game loads in safe mode.
+        * satisfies : String Array : An array of modIds that will be accepted when other mods check with requires or excludes.
+        * skip_checks : String Array : An array of modIds that will skip this mod when doing their requires and/or excludes checks.
+        -->
+
+
+        <div class="footer collection">
+            <div>
+                <p>FruitDragon & TomatoRadio's OMORI Modding Guide</p>
+                <p>Special thanks to the OMORI team & the OMORI Modding Community</p>
+            </div>
+            <div>
+                <p>If you notice any issues with this guide, please contact us or fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXdD5rLUAXPWWhukX_SphcPSs3mYO9W6PG9jbDZsjc7HvwiA/viewform?usp=publish-editor" target="_blank">this form</a>. </p>
+                <p class="footer-license">All templates provided under MIT license. All base game assets provided with open access to source material. All other resources are provided under the licenses assigned by their creators.</p>
+            </div>
+        </div>
+        
+     </div>
+    
+  
+</body>
+</html>

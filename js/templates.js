@@ -16,8 +16,8 @@ class SiteNav extends HTMLElement {
         <a href="#">Party Members</a>
         <a href="#">Enemies</a>
         <a href="#">Plugins</a>
+        <a href="packaging.html">Packaging</a>
         <a href="#">Common Errors & Misc Tips</a>
-        <a href="#">Goatttail</a>
       
     `;
   }
